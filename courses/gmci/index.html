@@ -1,10 +1,116 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Grundlagen der Mensch Computer Interaktion</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <style>
+        /* Allgemeine Schriftart */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        /* Navigationsleiste */
+        .navbar {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Logo in der Navbar */
+        .navbar .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Logout Button in der Navbar */
+        .navbar .logout-button {
+            padding: 10px 15px;
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .navbar .logout-button:hover {
+            background-color: #ff0000;
+        }
+
+
+        /* Container für den Hauptinhalt */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            margin-top: 70px;
+            /* Platz für die fixe Navigationsleiste */
+        }
+
+        /* Titel */
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Linker Bereich */
+        .left-section,
+        .right-section {
+            width: 45%;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+
+        .left-section {
+            align-self: flex-start;
+        }
+
+        .right-section {
+            align-self: flex-end;
+        }
+
+        /* Listen in der rechten Sektion */
+        .right-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .right-section li {
+            margin: 10px 0;
+        }
+
+        .right-section a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .right-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
+    <!-- Navigationsleiste -->
+    <div class="navbar">
+        <div class="logo">UploadAssignmentTool</div>
+        <a href="/app/app.html" class="logout-button">Zurueck</a>
+    </div>
+
+    <!-- Hauptinhalt -->
     <div class="container">
         <h1 class="title">Grundlagen der Mensch Computer Interaktion</h1>
         <div class="left-section">
@@ -23,4 +129,5 @@
         </div>
     </div>
 </body>
+
 </html>
