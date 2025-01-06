@@ -1,26 +1,73 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Grundlagen der Mensch Computer Interaktion</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    
 </head>
+
 <body>
     <div class="container">
         <h1 class="title">Grundlagen der Mensch Computer Interaktion</h1>
+        
         <div class="left-section">
             <h2>Current Assignment</h2>
             <p>Assignment details go here.</p>
             <input type="file" id="fileUpload">
         </div>
+        
         <div class="right-section">
             <h2>Manage Groups</h2>
             <ul>
-                <li><a href="#">Create Group</a></li>
+                <li><a href="#" id="createGroupBtn">Create Group</a></li>
                 <li><a href="#">Join Group</a></li>
-                <li><a href="#">Leave Group</a></li>
+                <li><a href="#" id="leaveGroupBtn">Leave Group</a></li>
+
                 <li><a href="#">View Groups</a></li>
             </ul>
+            <div id="currentGroup">
+                <h3>Current Group: Group 1</h3>
+                <p>Participants:</p>
+                <ul>
+                    <li>Student 1</li>
+                    <li>Student 2</li>
+                </ul>
+            </div>
         </div>
     </div>
+    
+    <!-- Popup for creating a group -->
+    <!-- Popup for creating a group -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="createGroupPopup">
+        <h2>Create Group</h2>
+    
+        <!-- Group Name -->
+        <label for="groupName">Group Name:</label>
+        <input type="text" id="groupName" placeholder="Enter group name" required><br>
+    
+        <!-- Search Bar -->
+        <label for="searchStudents">Search Students:</label>
+        <input type="text" id="searchStudents" placeholder="Search for students...">
+    
+        <!-- Search Results Dropdown -->
+        <div id="searchResults" class="search-results"></div>
+    
+        <!-- List of Selected Students -->
+        <div id="studentsList">
+            <!-- Dynamically added students will appear here -->
+        </div>
+    
+        <!-- Action Buttons -->
+        <button id="saveGroupBtn">Save</button>
+        <button id="cancelPopupBtn">Cancel</button>
+    </div>
+
+
+    
+    <script src="js/scripts.js"></script>
 </body>
+
 </html>

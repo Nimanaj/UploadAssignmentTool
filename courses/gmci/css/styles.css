@@ -46,3 +46,115 @@ body {
 .right-section a:hover {
     text-decoration: underline;
 }
+
+.container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+}
+
+.left-section,
+.right-section {
+    width: 45%;
+    float: left;
+    margin: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 300px;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#studentsList label {
+    display: block;
+    margin: 5px 0;
+}
+
+#searchStudents {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+#searchResults {
+    width: 100%;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: white;
+    z-index: 1001;
+    display: none;
+}
+
+.search-result-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background-color: #f0f0f0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#studentsList div {
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+#currentGroup {
+    margin-top: 20px;
+}
+
+#currentGroup h3 {
+    font-size: 18px;
+}
+
+#currentGroup ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#currentGroup li {
+    padding: 3px;
+}
