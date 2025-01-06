@@ -10,11 +10,46 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             height: 100vh;
             background-color: #f9f5e7;
             /* Beiger Hintergrund */
+        }
+
+        /* Navigationsleiste */
+        .navbar {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .navbar .logout-button {
+            padding: 10px 15px;
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .navbar .logout-button:hover {
+            background-color: #ff0000;
         }
 
         .container {
@@ -26,6 +61,8 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            margin-top: 70px;
+            /* Platz für die fixe Navbar */
         }
 
         /* Linker Bereich für Kursauswahl */
@@ -90,10 +127,33 @@
         .scoreboard ul li span {
             font-weight: bold;
         }
+
+        .speech-bubble {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .clippy-image {
+            margin-top: 20px;
+            width: 50px;
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
+    <!-- Navigationsleiste -->
+    <div class="navbar">
+        <div class="logo">UploadAssignmentTool</div>
+        <a href="/login/login.html" class="logout-button">Ausloggen</a>
+    </div>
+
+
+    <!-- Hauptinhalt -->
     <div class="container">
         <!-- Linker Bereich: Kursauswahl -->
         <div class="centered">
@@ -121,7 +181,8 @@
 
     <img src="/clippy.png" class="clippy-image" alt="Clippy">
     <div class="speech-bubble">
-        <p>Welcome back! You have one new correction since your last login. Check it out <a href="/courses/gmci/">here</a></p>
+        <p>Welcome back! You have one new correction since your last login. Check it out <a
+                href="/courses/gmci/">here</a></p>
     </div>
 </body>
 
