@@ -1,18 +1,123 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f5e7;
+            /* Beiger Hintergrund */
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            background: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Linker Bereich für Kursauswahl */
+        .centered {
+            flex: 3;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .centered h1 {
+            margin-bottom: 20px;
+        }
+
+        .course-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .course-button {
+            padding: 10px;
+            font-size: 1rem;
+            color: black;
+            background-color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .course-button:hover {
+            background-color: #e1e1f3;
+        }
+
+        /* Rechter Bereich für Scoreboard */
+        .scoreboard {
+            flex: 2;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-left: 1px solid #ddd;
+        }
+
+        .scoreboard h2 {
+            margin-top: 0;
+        }
+
+        .scoreboard ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .scoreboard ul li {
+            padding: 10px;
+            background: white;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .scoreboard ul li span {
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- create a centered div -->
-    <div class="centered">
-        <h1>Select your course</h1>
-        <div class="course-list">
-            <button class="course-button" onclick="location.href='/courses/gmci/'">Grundlagen der Mensch Computer Interaktion</button>
-            <button class="course-button" onclick="location.href='/courses/prog1/'">Programmieren I</button>
-            <button class="course-button" onclick="location.href='app.html'">Programmieren II</button>
+    <div class="container">
+        <!-- Linker Bereich: Kursauswahl -->
+        <div class="centered">
+            <h1>Select your course</h1>
+            <div class="course-list">
+                <button class="course-button" onclick="location.href='/courses/gmci/'">Grundlagen der Mensch Computer
+                    Interaktion</button>
+                <button class="course-button" onclick="location.href='/courses/prog1/'">Programmieren I</button>
+                <button class="course-button" onclick="location.href='app.html'">Programmieren II</button>
+            </div>
+        </div>
+
+        <!-- Rechter Bereich: Scoreboard -->
+        <div class="scoreboard">
+            <h2>Scoreboard</h2>
+            <ul>
+                <li><span>Student A:</span> 92%</li>
+                <li><span>Student B:</span> 91%</li>
+                <li><span>Student C:</span> 90%</li>
+                <li><span>Student D:</span> 90%</li>
+                <li><span>Student E:</span> 85%</li>
+            </ul>
         </div>
     </div>
 </body>
+
 </html>
