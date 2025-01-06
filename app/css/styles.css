@@ -62,3 +62,35 @@ footer {
 .course-button:hover {
     background-color: #f0f0f0;
 }
+
+
+.clippy-image {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+.speech-bubble {
+    position: fixed;
+    bottom: 120px; /* Adjust to position above Clippy */
+    right: 120px; /* Adjust to position near Clippy */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 10px;
+    width: 200px; /* Adjust width as needed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position the arrow */
+    right: 20px; /* Adjust to position near Clippy */
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: white;
+}
